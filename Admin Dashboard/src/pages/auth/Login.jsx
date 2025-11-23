@@ -63,8 +63,8 @@ export default function Login() {
             </button>
 
             {/* Main Login Card */}
-            <div className="relative w-full max-w-4xl">
-                <div className="bg-slate-900 dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-800 max-h-[600px]">
+            <div className="relative w-full max-w-3xl">
+<div className="bg-slate-900 dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-800">
                     <div className="grid lg:grid-cols-2">
                         {/* Left Side - Image Section */}
                         <div className="relative hidden lg:block overflow-hidden">
@@ -79,9 +79,9 @@ export default function Login() {
                             </div>
 
                             {/* Content at Bottom */}
-                            <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
+<div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                                 <div className="space-y-4">
-                                    <h1 className="text-5xl font-bold leading-tight">
+<h1 className="text-4xl font-bold leading-tight">
                                         WELCOME<br />
                                         AGAIN
                                     </h1>
@@ -99,7 +99,7 @@ export default function Login() {
                         </div>
 
                         {/* Right Side - Login Form */}
-                        <div className="p-6 lg:p-8 flex items-center bg-slate-900 dark:bg-slate-900">
+<div className="p-5 lg:p-6 flex items-center bg-slate-900 dark:bg-slate-900">
                             <div className="w-full max-w-md mx-auto space-y-4">
                                 {/* Form Header */}
                                 <div className="text-center space-y-2">
@@ -110,7 +110,7 @@ export default function Login() {
                                 </div>
 
                                 {/* Login Form */}
-                                <form onSubmit={handleSubmit} className="space-y-5">
+<form onSubmit={handleSubmit} className="space-y-4">
                                     {/* Error Alert */}
                                     {error && (
                                         <div className="flex items-start gap-3 p-4 rounded-xl bg-red-900/20 border border-red-800">
