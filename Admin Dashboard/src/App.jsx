@@ -17,7 +17,6 @@ import Assets from "@/pages/dashboard/Assets";
 import Marketplace from "@/pages/dashboard/Marketplace";
 import KnowledgeBase from "@/pages/dashboard/KnowledgeBase";
 import Notifications from "@/pages/dashboard/Notifications";
-import Analytics from "@/pages/dashboard/Analytics";
 
 import Landing from "@/pages/Landing";
 
@@ -55,7 +54,6 @@ function App() {
               <Route path="knowledge-base" element={<KnowledgeBase />} />
               <Route path="sos" element={<SOS />} />
               <Route path="notifications" element={<Notifications />} />
-              <Route path="analytics" element={<Analytics />} />
             </Route>
           </Routes>
         </Router>

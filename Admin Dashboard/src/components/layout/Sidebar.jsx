@@ -13,7 +13,6 @@ import {
     BookOpen,
     Siren,
     Bell,
-    BarChart3,
     LogOut
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -21,9 +20,9 @@ import { useAuth } from '@/context/AuthContext';
 
 const navItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
+    { icon: Users, label: 'Tourists', path: '/dashboard/tourists' },
     { icon: UserCheck, label: 'Guide Verification', path: '/dashboard/guides' },
     { icon: Store, label: 'Vendor Management', path: '/dashboard/vendors' },
-    { icon: Users, label: 'Tourists', path: '/dashboard/tourists' },
     { icon: MessageSquare, label: 'Reviews', path: '/dashboard/reviews' },
     { icon: Map, label: 'Destinations', path: '/dashboard/destinations' },
     { icon: Calendar, label: 'Events', path: '/dashboard/events' },
@@ -32,7 +31,6 @@ const navItems = [
     { icon: BookOpen, label: 'Knowledge Base', path: '/dashboard/knowledge-base' },
     { icon: Siren, label: 'SOS Console', path: '/dashboard/sos' },
     { icon: Bell, label: 'Notifications', path: '/dashboard/notifications' },
-    { icon: BarChart3, label: 'Analytics', path: '/dashboard/analytics' },
 ];
 
 export default function Sidebar() {

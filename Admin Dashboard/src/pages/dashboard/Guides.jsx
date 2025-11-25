@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
     Search,
     Filter,
@@ -48,9 +48,9 @@ const pendingGuides = [
         languages: ['Hindi', 'English', 'Spanish'],
         certifications: ['Tourism Guide License'],
         rating: 4.8,
-        touristsServed: 156,
+        touristsServed: 189,
         status: 'pending',
-        appliedDate: '2025-01-16',
+        appliedDate: '2025-01-18',
         documents: ['ID Proof', 'Certification']
     },
     {
@@ -60,72 +60,44 @@ const pendingGuides = [
         phone: '+91 98765 43212',
         location: 'Jaipur',
         experience: '7 years',
-        languages: ['Hindi', 'English', 'German'],
-        certifications: ['Tourism Guide License', 'Heritage Expert'],
-        rating: 4.9,
-        touristsServed: 489,
+        languages: ['Hindi', 'English', 'Gujarati'],
+        certifications: ['Tourism Guide License', 'History Degree'],
+        rating: 4.7,
+        touristsServed: 450,
         status: 'pending',
-        appliedDate: '2025-01-14',
-        documents: ['ID Proof', 'Certification', 'Experience Letter', 'Intro Video']
-    },
+        appliedDate: '2025-01-20',
+        documents: ['ID Proof', 'Certification', 'Experience Letter', 'Police Clearance']
+    }
 ];
 
 const approvedGuides = [
     {
         id: 101,
-        name: 'Suresh Raina',
-        email: 'suresh.r@email.com',
-        phone: '+91 98765 11111',
-        location: 'Ranchi',
-        experience: '8 years',
-        languages: ['Hindi', 'English', 'Bengali'],
-        certifications: ['Certified Guide', 'First Aid'],
-        rating: 4.9,
-        touristsServed: 1200,
+        name: 'Neha Singh',
+        email: 'neha.singh@email.com',
+        phone: '+91 98765 43213',
+        location: 'Mumbai',
+        experience: '4 years',
+        languages: ['Hindi', 'English', 'Marathi'],
+        certifications: ['Tourism Guide License'],
+        rating: 4.6,
+        touristsServed: 312,
         status: 'approved',
-        documents: ['ID Proof', 'Certification']
+        approvalDate: '2024-12-10'
     },
     {
         id: 102,
-        name: 'Anita Desai',
-        email: 'anita.d@email.com',
-        phone: '+91 98765 22222',
-        location: 'Jamshedpur',
-        experience: '4 years',
-        languages: ['Hindi', 'English'],
-        certifications: ['Certified Guide'],
-        rating: 4.7,
-        touristsServed: 450,
-        status: 'approved',
-        documents: ['ID Proof', 'Certification']
-    },
-    {
-        id: 103,
-        name: 'Vikram Singh',
-        email: 'vikram.s@email.com',
-        phone: '+91 98765 33333',
-        location: 'Deoghar',
+        name: 'Vikram Reddy',
+        email: 'vikram.reddy@email.com',
+        phone: '+91 98765 43214',
+        location: 'Hyderabad',
         experience: '6 years',
-        languages: ['Hindi', 'English', 'Bhojpuri'],
-        certifications: ['Certified Guide', 'Heritage Expert'],
-        rating: 4.8,
-        touristsServed: 890,
-        status: 'approved',
-        documents: ['ID Proof', 'Certification']
-    },
-    {
-        id: 104,
-        name: 'Meera Reddy',
-        email: 'meera.r@email.com',
-        phone: '+91 98765 44444',
-        location: 'Hazaribagh',
-        experience: '5 years',
         languages: ['Hindi', 'English', 'Telugu'],
-        certifications: ['Certified Guide'],
-        rating: 4.6,
-        touristsServed: 600,
+        certifications: ['Tourism Guide License', 'First Aid'],
+        rating: 4.9,
+        touristsServed: 560,
         status: 'approved',
-        documents: ['ID Proof', 'Certification']
+        approvalDate: '2024-11-05'
     },
     {
         id: 105,

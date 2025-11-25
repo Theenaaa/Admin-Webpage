@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
     Search,
     Filter,
@@ -106,6 +106,17 @@ export default function Vendors() {
     const vendorsListRef = useRef(null);
     const [isGlowing, setIsGlowing] = useState(false);
 
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setSelectedVendor(null);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
+
     const handleApprove = (vendorId) => {
         console.log('Approving vendor:', vendorId);
     };
@@ -162,8 +173,8 @@ export default function Vendors() {
                 </div>
                 <div className="flex gap-3">
                     <Badge
-                        variant={activeTab === 'all' ? 'default' : 'outline'}
-                        className={`text-lg px-4 py-2 cursor-pointer ${activeTab === 'all' ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' : ''}`}
+                        variant="outline"
+                        className="text-lg px-4 py-2 cursor-pointer"
                         onClick={() => setActiveTab('all')}
                     >
                         Total: {totalVendors}
