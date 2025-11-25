@@ -20,7 +20,6 @@ import { useAuth } from '@/context/AuthContext';
 
 const navItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
-    { icon: Users, label: 'Tourists', path: '/dashboard/tourists' },
     { icon: UserCheck, label: 'Guide Verification', path: '/dashboard/guides' },
     { icon: Store, label: 'Vendor Management', path: '/dashboard/vendors' },
     { icon: MessageSquare, label: 'Reviews', path: '/dashboard/reviews' },

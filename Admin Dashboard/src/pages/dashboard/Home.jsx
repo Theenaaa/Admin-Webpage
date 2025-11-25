@@ -122,15 +122,15 @@ export default function Home() {
                     <CardContent className="p-6">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-muted-foreground text-sm mb-1">Total Revenue</p>
-                                <p className="text-3xl font-bold text-foreground">₹8.9M</p>
+                                <p className="text-muted-foreground text-sm mb-1">Total Tours Completed</p>
+                                <p className="text-3xl font-bold text-foreground">12.5K</p>
                                 <div className="flex items-center gap-1 mt-2">
-                                    <TrendingUp className="w-4 h-4 text-green-600" />
-                                    <span className="text-sm text-green-600 font-medium">+23.5%</span>
+                                    <CheckCircle className="w-4 h-4 text-green-600" />
+                                    <span className="text-sm text-green-600 font-medium">+15.3%</span>
                                 </div>
                             </div>
                             <div className="w-12 h-12 bg-green-100 dark:bg-green-900/20 rounded-xl flex items-center justify-center">
-                                <IndianRupee className="w-6 h-6 text-green-600 dark:text-green-400" />
+                                <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
                             </div>
                         </div>
                     </CardContent>
@@ -140,7 +140,7 @@ export default function Home() {
                     <CardContent className="p-6">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-muted-foreground text-sm mb-1">Total Tourists</p>
+                                <p className="text-muted-foreground text-sm mb-1">Total Tourists Registered</p>
                                 <p className="text-3xl font-bold text-foreground">89.2K</p>
                                 <div className="flex items-center gap-1 mt-2">
                                     <TrendingUp className="w-4 h-4 text-green-600" />

@@ -9,7 +9,7 @@ import Home from "@/pages/dashboard/Home";
 import Guides from "@/pages/dashboard/Guides";
 import SOS from "@/pages/dashboard/SOS";
 import Vendors from "@/pages/dashboard/Vendors";
-import Tourists from "@/pages/dashboard/Tourists";
+
 import Reviews from "@/pages/dashboard/Reviews";
 import Destinations from "@/pages/dashboard/Destinations";
 import Events from "@/pages/dashboard/Events";
@@ -45,7 +45,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="guides" element={<Guides />} />
               <Route path="vendors" element={<Vendors />} />
-              <Route path="tourists" element={<Tourists />} />
+
               <Route path="reviews" element={<Reviews />} />
               <Route path="destinations" element={<Destinations />} />
               <Route path="events" element={<Events />} />
