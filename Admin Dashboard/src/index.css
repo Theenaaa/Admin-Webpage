@@ -93,6 +93,10 @@
   --glass-blur: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));

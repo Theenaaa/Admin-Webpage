@@ -37,10 +37,10 @@ export default function Landing() {
                     </div>
 
                     <nav className="hidden md:flex items-center gap-8">
-                        <a href="#" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Home</a>
-                        <a href="#" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Departments</a>
+                        <a href="#home" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Home</a>
+                        <a href="#departments" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Departments</a>
                         <a href="#" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Services</a>
-                        <a href="#" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Contact</a>
+                        <a href="#contact" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Contact</a>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -60,7 +60,7 @@ export default function Landing() {
             </header>
 
             {/* Hero Section */}
-            <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+            <section id="home" className="relative h-[600px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img src={heroBg} alt="Tourism Landscape" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40"></div>
@@ -114,7 +114,7 @@ export default function Landing() {
             </section>
 
             {/* Key Government Services */}
-            <section className="py-20 bg-slate-50 border-t border-slate-200 transition-colors duration-300">
+            <section id="departments" className="py-20 bg-slate-50 border-t border-slate-200 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-slate-800 mb-4">Key Government Services</h2>
@@ -172,7 +172,7 @@ export default function Landing() {
             </section>
 
             {/* Footer */}
-            <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 transition-colors duration-300">
+            <footer id="contact" className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                         <div className="col-span-1 md:col-span-2">

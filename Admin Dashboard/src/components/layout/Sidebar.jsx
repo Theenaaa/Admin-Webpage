@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/context/AuthContext';
+import logoImg from '@/assets/jharkhand_tourism_logo.png';
 
 const navItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
@@ -43,11 +44,8 @@ export default function Sidebar() {
 
     return (
         <aside className="w-64 bg-white dark:bg-card border-r border-neutral-100 dark:border-border h-screen fixed left-0 top-0 overflow-y-auto z-50 hidden md:flex flex-col transition-colors duration-300">
-            <div className="p-6">
-                <h1 className="text-2xl font-bold text-primary flex items-center gap-2">
-                    <Map className="w-8 h-8" />
-                    TourismAdmin
-                </h1>
+            <div className="p-6 flex justify-center">
+                <img src={logoImg} alt="Jharkhand Tourism" className="h-12 w-auto object-contain" />
             </div>
 
             <nav className="flex-1 px-4 space-y-2">
