@@ -60,30 +60,29 @@ export default function Sidebar() {
                             cn(
                                 "flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group relative overflow-hidden",
                                 isActive
-                                    ? "bg-primary/10 text-primary font-semibold"
-                                    : "text-muted-foreground hover:bg-gray-100"
+                                    ? "bg-gradient-to-r from-primary to-primary/90 text-primary-foreground shadow-md shadow-primary/25 translate-x-1"
+                                    : "text-muted-foreground hover:bg-gray-100 hover:text-accent-foreground hover:translate-x-1"
                             )
                         }
                     >
                         {({ isActive }) => (
                             <>
-                                <item.icon className="w-5 h-5" />
+                                <item.icon className={cn("w-5 h-5 transition-transform duration-300", isActive && "scale-110")} />
                                 <span className="font-medium">{item.label}</span>
-                                {isActive && (
-                                    <div className="absolute right-0 top-0 h-full w-1 bg-primary" />
-                                )}
                             </>
                         )}
                     </NavLink>
                 ))}
             </nav>
-
             <div className="p-4 mt-auto">
                 <button
                     onClick={handleLogout}
-                    className="flex items-center gap-3 px-4 hover:bg-gray-100 py-3 w-full rounded-xl text-destructive transition-colors"
+                    className={cn(
+                        "flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group relative overflow-hidden w-full",
+                        "text-muted-foreground hover:bg-gray-100 hover:text-accent-foreground hover:translate-x-1"
+                    )}
                 >
-                    <LogOut className="w-5 h-5" />
+                    <LogOut className="w-5 h-5 transition-transform duration-300" />
                     <span className="font-medium">Logout</span>
                 </button>
             </div>

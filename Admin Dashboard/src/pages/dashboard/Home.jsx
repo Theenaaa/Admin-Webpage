@@ -345,7 +345,7 @@ export default function Home() {
             </div>
 
             {/* Section 4: Secondary Charts */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
                 {/* Top Destinations */}
                 <Card className="glass-card border-border">
                     <CardHeader>
@@ -371,38 +371,7 @@ export default function Home() {
                     </CardContent>
                 </Card>
 
-                {/* Revenue Trend */}
-                <Card className="glass-card border-border">
-                    <CardHeader>
-                        <CardTitle className="text-foreground">Monthly Revenue Trend</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <ResponsiveContainer width="100%" height={300}>
-                            <LineChart data={touristGrowthData}>
-                                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                                <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" />
-                                <YAxis stroke="hsl(var(--muted-foreground))" />
-                                <Tooltip
-                                    contentStyle={{
-                                        backgroundColor: 'hsl(var(--card))',
-                                        border: '1px solid hsl(var(--border))',
-                                        borderRadius: '8px',
-                                        color: 'hsl(var(--foreground))'
-                                    }}
-                                />
-                                <Legend />
-                                <Line
-                                    type="monotone"
-                                    dataKey="revenue"
-                                    stroke="#10b981"
-                                    strokeWidth={3}
-                                    dot={{ fill: '#10b981', r: 5 }}
-                                    activeDot={{ r: 7 }}
-                                />
-                            </LineChart>
-                        </ResponsiveContainer>
-                    </CardContent>
-                </Card>
+
             </div>
 
             {/* Section 5: Lists & Actions */}
@@ -440,27 +409,7 @@ export default function Home() {
 
                 {/* Quick Actions & Events */}
                 <div className="lg:col-span-2 space-y-6">
-                    {/* Quick Actions */}
-                    <Card className="glass-card">
-                        <CardHeader>
-                            <CardTitle className="text-lg font-semibold text-foreground">Quick Actions</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                {quickActions.map((action, index) => (
-                                    <Button
-                                        key={index}
-                                        variant="outline"
-                                        className="h-auto py-6 flex flex-col items-center gap-3 hover:bg-primary/10 hover:border-primary/50 border-border text-foreground hover:text-primary transition-all duration-200"
-                                        onClick={() => navigate(action.path)}
-                                    >
-                                        <action.icon className="w-6 h-6 text-primary" />
-                                        <span className="text-sm font-medium text-center">{action.label}</span>
-                                    </Button>
-                                ))}
-                            </div>
-                        </CardContent>
-                    </Card>
+
 
                     {/* Upcoming Events */}
                     <Card className="glass-card">
@@ -490,52 +439,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Section 6: System Health */}
-            <Card className="glass-card">
-                <CardHeader>
-                    <CardTitle className="text-lg font-semibold text-foreground">System Health</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-green-100 dark:bg-green-900/20 rounded-xl flex items-center justify-center">
-                                <Activity className="w-6 h-6 text-green-600 dark:text-green-400" />
-                            </div>
-                            <div>
-                                <p className="text-sm text-muted-foreground">Uptime</p>
-                                <p className="text-xl font-bold text-foreground">99.9%</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-xl flex items-center justify-center">
-                                <Activity className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                            </div>
-                            <div>
-                                <p className="text-sm text-muted-foreground">Server Load</p>
-                                <p className="text-xl font-bold text-foreground">45%</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-xl flex items-center justify-center">
-                                <Activity className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                            </div>
-                            <div>
-                                <p className="text-sm text-muted-foreground">API Response</p>
-                                <p className="text-xl font-bold text-foreground">120ms</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/20 rounded-xl flex items-center justify-center">
-                                <Activity className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-                            </div>
-                            <div>
-                                <p className="text-sm text-muted-foreground">Active Users</p>
-                                <p className="text-xl font-bold text-foreground">1,234</p>
-                            </div>
-                        </div>
-                    </div>
-                </CardContent>
-            </Card>
+
         </div>
     );
 }
